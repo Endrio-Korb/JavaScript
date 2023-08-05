@@ -17,12 +17,17 @@ let pessoa = new CadastrarPessoa()
 pessoa.nome = "Endrio"
 pessoa.email = "endrio@gmail.com"
 pessoa.telefone = "47 9999 9999"
-pessoa.adicionar()
+pessoa.deletar('Endrio')
 
-pessoa.nome = "João"
+pessoa.nome = "João das Couves"
 pessoa.email = "joão@gmail.com"
 pessoa.telefone = "47 8888888"
-pessoa.adicionar()
+
 
 let lista = pessoa.listar()
+
 console.log(lista)
+
+pessoa.editar('João')
+
+console.log(pessoa.listar());

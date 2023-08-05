@@ -53,10 +53,16 @@ export default class CadastrarPessoa {
 
         return dados
     }
-    editar() {
-
-    }
-    deletar() {
-
+    editar(busca) {
+        let pos = this.dataBase.indexOf(busca)
+        this.dataBase[pos]= {
+                nome: this.nome,
+                email: this.email,
+                telefone: this.telefone,
+            }
+        }
+    deletar(deletar){
+        var pos = this.dataBase.indexOf(deletar)
+        this.dataBase.splice(pos, 1)
     }
 }
