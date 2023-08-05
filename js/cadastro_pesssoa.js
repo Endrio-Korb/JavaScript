@@ -54,7 +54,7 @@ export default class CadastrarPessoa {
         return dados
     }
     editar(busca) {
-        let pos = this.dataBase.indexOf(busca)
+        let pos = this.dataBase.map(dados => dados.nome).indexOf(busca)
         this.dataBase[pos]= {
                 nome: this.nome,
                 email: this.email,
