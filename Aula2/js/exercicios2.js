@@ -1,8 +1,8 @@
 
 async function fetchData() {
 
-    const cpf = document.getElementById("cpf")
-    const url = `https://viacep.com.br/ws/${cpf}/json/`;
+    const cep = document.querySelector("cep")
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
     
     const response = await fetch(url);
     if (!response.ok) {
@@ -27,5 +27,5 @@ console.log("Aguardando resultado...");
 const botaoCep = document.getElementById("button-cep")
 
 botaoCep.addEventListener('click',() => {
-    consultaCPF()
+    fetchData()
 })
